@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Priyanshu Pranav – Web Developer Portfolio</title>
+  <meta name="description" content="Portfolio of Priyanshu Pranav, B.Tech CSE student and web development intern.">
+  <meta name="color-scheme" content="light dark">
+
+  <!-- Apply the saved theme before the page paints, to avoid a flash of the wrong theme -->
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('task2.theme');
+        if (saved === 'light' || saved === 'dark') document.documentElement.dataset.theme = saved;
+      } catch (e) {}
+    })();
+  </script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#top" aria-label="Priyanshu Pranav, back to top">PP</a>
+
+      <button class="icon-btn menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        <span class="bars" aria-hidden="true"></span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button class="icon-btn theme-btn" id="theme-btn" type="button" aria-label="Switch to dark theme">
+        <span class="theme-icon" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="hero-hello">Hi, I’m</p>
+          <h1 id="hero-title">Priyanshu Pranav</h1>
+          <p class="hero-lead">I’m a B.Tech Computer Science student who builds clean, responsive websites with HTML, CSS and JavaScript.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects">View my projects</a>
+            <a class="btn btn-outline" href="#contact">Get in touch</a>
+          </div>
+        </div>
+
+        <aside class="hero-card" aria-label="Quick facts">
+          <div class="avatar" aria-hidden="true">PP</div>
+          <dl class="facts">
+            <div><dt>Studying</dt><dd>B.Tech CSE</dd></div>
+            <div><dt>Focus</dt><dd>Front-end development</dd></div>
+            <div><dt>Internship</dt><dd>Web Development</dd></div>
+          </dl>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="wrap about-grid">
+        <h2 id="about-title">About me</h2>
+        <div class="prose">
+          <p>I’m studying Computer Science and Engineering and learning to turn ideas into working websites. I enjoy the part of front-end work where a design has to hold up on every screen size, from a phone to a wide desktop monitor.</p>
+          <p>During my Web Development internship I completed task-based projects: a semantic portfolio, a responsive redesign, a to-do app, a weather dashboard and an e-commerce product catalog. Each one taught me something new about structure, layout, state or data.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="skills" aria-labelledby="skills-title">
+      <div class="wrap">
+        <h2 id="skills-title">Skills</h2>
+        <div class="skills-grid">
+          <article class="skill-group">
+            <h3>Front-end</h3>
+            <ul class="tags">
+              <li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>Responsive design</li>
+            </ul>
+          </article>
+          <article class="skill-group">
+            <h3>Layout &amp; styling</h3>
+            <ul class="tags">
+              <li>CSS Grid</li><li>Flexbox</li><li>CSS variables</li><li>Media queries</li>
+            </ul>
+          </article>
+          <article class="skill-group">
+            <h3>Web APIs &amp; tools</h3>
+            <ul class="tags">
+              <li>DOM</li><li>Fetch API</li><li>localStorage</li><li>Git &amp; GitHub</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <div class="wrap">
+        <h2 id="projects-title">Projects</h2>
+        <div class="projects-grid">
+          <article class="project p-todo">
+            <h3>To-Do List</h3>
+            <p>Add, edit, delete and filter tasks. Everything is saved in the browser with localStorage, so your list is still there after a reload.</p>
+            <ul class="tags"><li>JavaScript</li><li>DOM</li><li>localStorage</li></ul>
+            <a class="project-link" href="https://github.com/Pranav-fullstack/javascript-todo-app12" target="_blank" rel="noopener">View code on GitHub<span class="visually-hidden"> for the To-Do List</span></a>
+          </article>
+
+          <article class="project p-weather">
+            <h3>Weather Dashboard</h3>
+            <p>Search any city and see live temperature, humidity and wind speed. Data comes from a public REST API using fetch and async/await, with clear error messages when a request fails.</p>
+            <ul class="tags"><li>Fetch API</li><li>async/await</li><li>JSON</li></ul>
+            <a class="project-link" href="https://github.com/Pranav-fullstack/javascript-weather-dashboard" target="_blank" rel="noopener">View code on GitHub<span class="visually-hidden"> for the Weather Dashboard</span></a>
+          </article>
+
+          <article class="project p-shop">
+            <h3>E-commerce Catalog</h3>
+            <p>A product catalog with a clean, browsable layout.</p>
+            <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+            <a class="project-link" href="https://github.com/Pranav-fullstack/ecommerce-product-catalog" target="_blank" rel="noopener">View code on GitHub<span class="visually-hidden"> for the E-commerce Catalog</span></a>
+          </article>
+
+          <article class="project p-site">
+            <h3>This portfolio</h3>
+            <p>Built mobile-first with Grid, Flexbox and CSS variables, including this light and dark theme.</p>
+            <ul class="tags"><li>CSS Grid</li><li>Flexbox</li></ul>
+            <a class="project-link" href="https://github.com/Pranav-fullstack/responsive-portfolio" target="_blank" rel="noopener">View code on GitHub<span class="visually-hidden"> for this portfolio</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="experience" aria-labelledby="exp-title">
+      <div class="wrap">
+        <h2 id="exp-title">Experience</h2>
+        <ol class="timeline">
+          <li>
+            <h3>Web Development Intern</h3>
+            <p class="meta">Thiranex</p>
+            <p>Completed five hands-on tasks covering semantic HTML, advanced CSS, JavaScript state management, asynchronous API work and an e-commerce catalog.</p>
+          </li>
+          <li>
+            <h3>B.Tech, Computer Science and Engineering</h3>
+            <p class="meta">Currently studying</p>
+            <p>Building a foundation in programming and software development.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" id="contact" aria-labelledby="contact-title">
+      <div class="wrap contact-grid">
+        <div>
+          <h2 id="contact-title">Contact</h2>
+          <p class="prose">Have a question or a project in mind? Send me a message and I’ll reply as soon as I can.</p>
+          <p><a class="project-link" href="https://github.com/Pranav-fullstack" target="_blank" rel="noopener">github.com/Pranav-fullstack</a></p>
+        </div>
+
+        <!-- Replace your.email@example.com with your real email address -->
+        <form class="contact-form" action="mailto:your.email@example.com" method="post" enctype="text/plain">
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required>
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button class="btn btn-primary" type="submit">Send message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>&copy; <span id="year">2026</span> Priyanshu Pranav</p>
+      <a href="#top">Back to top</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
